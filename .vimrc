@@ -20,6 +20,9 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/nerdcommenter'
 " tagbar 程序结构显示
 Bundle 'majutsushi/tagbar'
+" python-mode插件
+Bundle 'klen/python-mode'
+
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
@@ -63,8 +66,13 @@ set autoindent "自动缩排
 set ruler "显示最后一行的状态
 set showmode "显示左下角状态
 colorscheme tomorrow "主题配色
-set ts=4 "tab为4格
+set tabstop=4 "读取时tab占用空格数
+set softtabstop=4 "退格以及按下tab占用空格数
+set shiftwidth=4 "tab显示空格数
 set expandtab "tab转换为空格
+set textwidth=79 "设置一行最多字符数
+set vb t_vb= "去除错误提示音
+set cursorline "游标线
 
 
 " 按键映射
@@ -84,7 +92,9 @@ nmap <F7> :NERDTree<CR>
 
 
 
-
+" python-mode 配置
+let g:pymode = 0 "开关python-mode
+let g:pymode_python = 'python' "默认python版本为python3
 
 " NERDTree 配置
 let NERDTreeShowLineNumbers=1 "NERDtree显示行号
