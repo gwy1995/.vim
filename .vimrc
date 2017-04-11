@@ -18,6 +18,8 @@ Bundle 'chriskempson/vim-tomorrow-theme'
 Bundle 'scrooloose/nerdtree'
 " 加注释插件
 Bundle 'scrooloose/nerdcommenter'
+" tagbar 程序结构显示
+Bundle 'majutsushi/tagbar'
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
@@ -56,13 +58,32 @@ set nu "行号
 syntax on "语法高亮
 set bg=dark "背景色
 set hlsearch "高亮度反白
-set backspace=1 "用退格键删除
+set backspace=2 "用退格键删除
 set autoindent "自动缩排
 set ruler "显示最后一行的状态
 set showmode "显示左下角状态
 colorscheme tomorrow "主题配色
 set ts=4 "tab为4格
 set expandtab "tab转换为空格
+
+
+" 按键映射
+
+" 括号引号自动补全
+inoremap ' ''<ESC>i
+inoremap " ""<ESC>i
+inoremap ( ()<ESC>i
+inoremap [ []<ESC>i
+inoremap { {<CR>}<ESC>O
+
+" tagbar呼出
+nmap <F8> :TagbarToggle<CR>
+
+" NERDTree呼出
+nmap <F7> :NERDTree<CR>
+
+
+
 
 
 " NERDTree 配置
