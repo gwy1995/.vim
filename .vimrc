@@ -22,6 +22,10 @@ Bundle 'scrooloose/nerdcommenter'
 Bundle 'majutsushi/tagbar'
 " python-mode插件
 Bundle 'klen/python-mode'
+" 括号自动匹配插件
+Bundle 'jiangmiao/auto-pairs'
+" ctrlp文件搜索插件
+Bundle 'ctrlpvim/ctrlp.vim'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
@@ -65,7 +69,7 @@ set backspace=2 "用退格键删除
 set autoindent "自动缩排
 set ruler "显示最后一行的状态
 set showmode "显示左下角状态
-colorscheme tomorrow "主题配色
+colorscheme Tomorrow-Night "主题配色
 set tabstop=4 "读取时tab占用空格数
 set softtabstop=4 "退格以及按下tab占用空格数
 set shiftwidth=4 "tab显示空格数
@@ -77,19 +81,18 @@ set cursorline "游标线
 
 " 按键映射
 
-" 括号引号自动补全
-inoremap ' ''<ESC>i
-inoremap " ""<ESC>i
-inoremap ( ()<ESC>i
-inoremap [ []<ESC>i
-inoremap { {<CR>}<ESC>O
+" 括号引号自动补全(已有autopair插件)
+"inoremap ' ''<ESC>i
+"inoremap " ""<ESC>i
+"inoremap ( ()<ESC>i
+"inoremap [ []<ESC>i
+"inoremap { {<CR>}<ESC>O
 
 " tagbar呼出
-nmap <F8> :TagbarToggle<CR>
+nmap <F6> :TagbarToggle<CR>
 
 " NERDTree呼出
-nmap <F7> :NERDTree<CR>
-
+nmap <F7> :NERDTreeToggle<CR>
 
 
 " python-mode 配置
