@@ -60,7 +60,7 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 
 
-" 配置
+" 基本配置
 set nu "行号
 syntax on "语法高亮
 set bg=dark "背景色
@@ -77,9 +77,19 @@ set expandtab "tab转换为空格
 set textwidth=79 "设置一行最多字符数
 set vb t_vb= "去除错误提示音
 set cursorline "游标线
+set mouse=a "所有模式允许使用鼠标
 
 
 " 按键映射
+
+" 上下左右切换窗口
+nmap <UP> <C-W>k
+nmap <DOWN> <C-W>j
+nmap <RIGHT> <C-W>l
+nmap <LEFT> <C-W>h
+
+" 运行python文件
+nmap <F5> :w<CR>:!python %<CR>
 
 " 括号引号自动补全(已有autopair插件)
 "inoremap ' ''<ESC>i
@@ -95,6 +105,8 @@ nmap <F6> :TagbarToggle<CR>
 nmap <F7> :NERDTreeToggle<CR>
 
 
+" 插件配置
+
 " python-mode 配置
 let g:pymode = 0 "开关python-mode
 let g:pymode_python = 'python' "默认python版本为python3
@@ -108,3 +120,6 @@ let NERDTreeShowBookmarks=1 "显示书签
 
 " NERDCommener 配置
 let g:NERDSpaceDelims=0 "注释后加空格
+
+" tagbar 配置
+let g:tagbar_singleclick=1 "鼠标单击，光标跳到定义处
