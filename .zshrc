@@ -91,3 +91,11 @@ export PATH="/Users/gwy-pc/anaconda3/bin:$PATH"
 export PATH="/usr/local/Cellar/mongodb/3.2.10/bin:${PATH}"
 # autojump plug
 [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
+
+# server
+alias gwyvps="ssh root@104.224.158.173 -p 27389"
+
+# thefuck
+eval $(thefuck --alias FUCK)
+
+eval $(thefuck --alias)

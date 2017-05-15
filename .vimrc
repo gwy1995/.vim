@@ -26,6 +26,14 @@ Bundle 'klen/python-mode'
 Bundle 'jiangmiao/auto-pairs'
 " ctrlp文件搜索插件
 Bundle 'ctrlpvim/ctrlp.vim'
+" airline状态框
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+" markdown插件
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
+" vim git 插件
+Plugin 'tpope/vim-fugitive'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
@@ -78,7 +86,7 @@ set textwidth=79 "设置一行最多字符数
 set vb t_vb= "去除错误提示音
 set cursorline "游标线
 set mouse=a "所有模式允许使用鼠标
-
+set encoding=utf-8 "设置字符编码方式
 
 " 按键映射
 
@@ -123,3 +131,13 @@ let g:NERDSpaceDelims=0 "注释后加空格
 
 " tagbar 配置
 let g:tagbar_singleclick=1 "鼠标单击，光标跳到定义处
+
+" airline 配置
+set laststatus=2 "打开文件就显示airline
+let g:airline#extensions#tabline#enabled = 1 "tabline开启
+
+" powerline font airline字体显示
+let g:airline_powerline_fonts = 1 "airline字体显示正常
+
+" vim-markdown配置
+let g:vim_markdown_folding_disabled = 1
