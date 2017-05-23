@@ -84,7 +84,8 @@ set shiftwidth=4 "tab显示空格数
 set expandtab "tab转换为空格
 set textwidth=79 "设置一行最多字符数
 set vb t_vb= "去除错误提示音
-set cursorline "游标线
+set cursorline "水平游标线
+set cursorcolumn "垂直游标线
 set mouse=a "所有模式允许使用鼠标
 set encoding=utf-8 "设置字符编码方式
 
